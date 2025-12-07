@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8-Bit 雷霆战机</title>
+    <!-- 引入复古像素字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-boy">
+        <div class="screen-border">
+            <div class="ui-top">
+                <span>SCORE</span>
+                <span id="score">0000</span>
+            </div>
+            
+            <canvas id="gameCanvas"></canvas>
+            
+            <div id="start-screen" class="overlay">
+                <h1>PIXEL<br>FIGHTER</h1>
+                <p class="blink">PRESS START</p>
+                <button onclick="startGame()">START</button>
+            </div>
+            
+            <div id="game-over-screen" class="overlay" style="display: none;">
+                <h1>GAME OVER</h1>
+                <p>SCORE: <span id="final-score">0</span></p>
+                <button onclick="startGame()">RETRY</button>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
